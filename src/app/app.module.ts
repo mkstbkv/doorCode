@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { KeypadComponent } from './keypad/keypad.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { keypadReducer } from './keypad.reducer';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { keypadReducer } from './keypad.reducer';
     BrowserModule,
     StoreModule.forRoot({key: keypadReducer}, {}),
     BrowserAnimationsModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
