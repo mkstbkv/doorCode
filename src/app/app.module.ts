@@ -6,17 +6,20 @@ import { StoreModule } from '@ngrx/store';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { KeypadComponent } from './keypad/keypad.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { keypadReducer } from './keypad.reducer';
 import { MatButtonModule } from '@angular/material/button';
+import { CalculatorComponent } from './calculator/calculator.component';
+import { calculatorReducer } from './calculator.reducer';
 
 @NgModule({
   declarations: [
     AppComponent,
-    KeypadComponent
+    KeypadComponent,
+    CalculatorComponent
   ],
   imports: [
     BrowserModule,
-    StoreModule.forRoot({key: keypadReducer}, {}),
+    StoreModule.forRoot({count: calculatorReducer}, {}),
+
     BrowserAnimationsModule,
     FlexLayoutModule,
     MatButtonModule
