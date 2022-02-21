@@ -1,6 +1,7 @@
 <div class="container">
-  <div class="key">
-    {{ '*' }}
+  <div [ngClass]="getClassName()">
+    <p>{{ asterisks() }}</p>
+    <h1>{{ isCorrect }}</h1>
   </div>
 
   <div fxLayout="row wrap " fxLayoutGap="40px grid" fxLayoutAlign="center start" class="buttons">
@@ -32,13 +33,13 @@
       <button mat-raised-button  color="warn" (click)="addChar('9')">9</button>
     </div>
     <div>
-      <button mat-raised-button  color="warn" (click)="addChar('<')"><</button>
+      <button mat-raised-button  color="warn" (click)="remove()"><</button>
     </div>
     <div>
       <button mat-raised-button  color="warn" (click)="addChar('0')">0</button>
     </div>
     <div>
-      <button mat-raised-button  color="warn" (click)="addChar('E')">E</button>
+      <button mat-raised-button  color="warn" (click)="result()">E</button>
     </div>
   </div>
 </div>
